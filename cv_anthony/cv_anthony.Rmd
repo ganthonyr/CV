@@ -1,0 +1,204 @@
+---
+name: George Anthony
+surname: Romero Cerdán
+#profilepic: "pp.jpg"
+position: "Estudiante de Medicina humana | Universidad Nacional Mayor de San Marcos"
+address: "Lima, Perú"
+phone: +51 955 446 754
+email: "anthony.romeromh@gmail.com"
+orcid: 0000-0001-6342-647X
+researchgate: "Anthony-Romero-5"
+#twitter: Anthonyrc94
+linkedin: garomeroc
+date: "`r format(Sys.time(), '%B %Y')`"
+always_allow_html: yes
+headcolor: "414141"
+docname: CV
+header-includes:
+  \usepackage{float}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \arrayrulecolor{white}
+  \usepackage{hhline}
+  \definecolor{light-gray}{gray}{0.95}
+output: 
+  vitae::awesomecv:
+    keep_tex: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tinytex)
+library(vitae)
+library(tidyverse)
+library(dplyr)
+library(kableExtra)
+library(knitr)
+library(huxtable)
+```
+
+# Algunas cosas sobre mí
+
+* He colaborado en proyectos de investigación con el Instituto de Evaluación de Tecnologías en Salud e Investigación - EsSalud durante los últimos 6 meses. <br>
+* Tengo habilidades básicas en análisis exploratorio, análisis estadístico descriptivo e inferencial y visualización gráfica de datos mediante el lenguaje R y su IDE RStudio y el software Stata.<br>
+* Soy miembro de la Asociación para el Desarrollo de la Investigación Estudiantil en Ciencias de la Salud - ADIECS desde el año 2018.<br>
+<br>
+
+# Estudio Superior
+
+```{r estudio-superior}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates,
+  "Escuela de Medicina Humana - Facultad de Medicina San Fernando", "Universidad Nacional Mayor de San Marcos", "Lima, Perú", "Marzo 2018 - Actualidad", 
+) %>% 
+  detailed_entries(degree, dates, uni, loc)
+```
+
+# Formación Adicional
+
+## -Investigación
+```{r investigacion}
+tribble(
+  ~ degree, ~ uni, ~ dates,
+  "Instituto Nacional de Salud del Perú", "Cursos autoformativos de Redacción científica, de Redacción de Reporte de Casos y de Elaboración de Protocolos de Investigación en salud", "noviembre 2021",
+  "CITI Program", "Curso de ética en investigación", "septiembre 2021",
+  "Cochrane iberoamérica", "Curso Cochrane: Cómo realizar una revisión sobre intervenciones", "diciembre 2020",
+  "Universidad Nacional Mayor de San Marcos", "Investigación y revisión bibliográfica en Scopus", "noviembre 2020",
+  "Imperial College London", "Programa especializado en Epidemiología para la Salud pública", "noviembre 2020",
+  "Universidad Nacional Autónoma de México", "Curso Introducción a Data Science: Programación Estadística con R", "mayo 2020",
+  "Johns Hopkins University", "Programa especializado de Bioestadística en Salud Pública", "febrero 2020",
+  "EviSalud", "Curso Principios de Medicina Basada en Evidencias", "febrero 2020",
+  "ADIECS Asociación para el Desarrollo de la Investigación Estudiantil en Ciencias de la Salud", "The Adiecs Basic Course of Research (ABC of Research) 2019", "enero-febrero 2019",
+) %>% 
+  detailed_entries(degree, dates, uni)
+```
+
+## -Académica
+```{r academica}
+tribble(
+  ~ degree, ~ uni, ~ dates,
+  "Santander Scholarships | ESADE", "Skills - Professional Development Program", "abril-mayo 2021",
+  "Universidad Peruana Cayetano Heredia", "Curso de entrenamiento básico de COVID-19", "diciembre 2020",
+  "Johns Hopkins University", "COVID-19 Contact Tracing course", "julio 2020",
+  ) %>% 
+  detailed_entries(degree, dates, uni)
+```
+
+\pagebreak
+<br>
+<br>
+
+# Participación en Congresos
+
+```{r participacion-congresos}
+tribble(
+  ~ degree, ~ uni, ~ dates,
+  "Sociedad Científica Médico Estudiantil Peruana (SOCIMEP)", "XXXIII Congreso Científico Nacional - Ucayali", "agosto 2019",
+  "Facultad de Medicina - Universidad Nacional Mayor de San Marcos", "XVI Jornadas Científicas Sanfernandinas", "septiembre 2018",
+  "Instituto Nacional de Salud del Perú", "XII Congreso Científico Nacional del Instituto Nacional de Salud", "noviembre 2018"
+) %>% 
+  detailed_entries(degree, dates, uni)
+```
+ 
+# Participación en grupos académicos y de investigación
+
+```{r participacion-grupos}
+tribble(
+  ~ role, ~ dates,
+  "Pasante en la Unidad de Investigación Multidisciplinaria de la Clínica Avendaño", "enero-febrero 2022",
+  "Asesor junior en la III Estancia de verano de la UIGSES-USIL", "enero-febrero 2022",
+  "Colaborador en proyectos de investigación del IETSI - EsSalud", "septiembre 2021 - Actualidad",
+  "Divulgador científico en CAPTA", "abril 2021 - Actualidad",
+  "Pasante en la Unidad de Generación y Síntesis de la Evidencia de la USIL", "enero-febrero 2021",
+  "Docente en la Ayudantía de Bioestadística de ADIECS", "julio 2020 - Actualidad",
+  "Miembro de ADIECS UNMSM", "marzo 2018 - Actualidad"
+) %>% 
+  detailed_entries(role, dates)
+```
+
+# Cargos y experiencia en actividades de organización
+
+```{r experiencia-cargos}
+tribble(
+  ~ degree, ~ uni, ~ dates,
+  "Miembro del equipo organizador de ADIECS", "II Taller de Búsqueda Bibliográfica", "noviembre 2021",
+  "Organizado como Secretario de Investigación del Centro de Estudiantes de Medicina de la UNMSM", "Teleconferencia “Telesalud en tiempos de COVID-19: Fundamentos y aplicaciones”", "septiembre 2020",
+  "Miembro del equipo organizador de ADIECS", "I Taller de Búsqueda Bibliográfica", "noviembre 2020",
+  "Director de Desarrollo Interno de ADIECS", "The ADIECS Basic Course of Research (ABC of Research) 2020", "enero-febrero 2020",
+  "Secretario de Investigación",  "Centro de Estudiantes de Medicina de la UNMSM", "enero-diciembre 2020",
+  "Miembro fundador y docente", "Ayudantía de Bioestadística de ADIECS", "agosto 2020 - Actualidad",
+  "ADIECS | IFMSA-UNMSM | CERSEU-UNMSM | Congreso de la República", "I Conversatorio científico: “COVID-19 y las lecciones aprendidas en 9	diciembre 2020 meses de pandemia”", "diciembre 2020"
+) %>% 
+   detailed_entries(degree, dates, uni)
+```
+
+# Producción científica
+
+- Díaz-Vélez C., Urrunaga-Pastor D., **Romero-Cerdán A** et al. Risk factors for mortality in hospitalized patients with COVID-19 from three hospitals in Peru: a retrospective cohort study. F1000Res. 2021 Mar 19;10:224. doi: 10.12688/f1000research.51474.1. [(*Link*)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8207806/). <br>
+- Alarcón-Ruiz Christoper A., Cortez-Soto Andrea G., **Romero-Cerdan Anthony** et al . Producción científica y redes de colaboración en la Seguridad Social del Perú (EsSalud): Análisis bibliométrico 2008-2020. Rev. Cuerpo Med. HNAAA. 2021  Abr; 14(2):145-154. doi: 10.35434/rcmhnaaa.2021.142.1030. [(*Link*)](http://www.scielo.org.pe/scielo.php?script=sci_arttext&pid=S2227-47312021000200006&lng=es).<br>
+- Moquillaza-Alcántara, V., Munares-García, O., **Romero-Cerdán, A**. Características de los registros diagnósticos de preeclampsia en el Perú. Rev Obstet Ginecol Venez. 2020; 80(1):32-36. [(*Link*)](https://www.researchgate.net/profile/Victor-Moquillaza-Alcantara/publication/340050015_Caracteristicas_de_los_registros_diagnosticos_de_preeclampsia_en_el_Peru/links/5e744cca458515c677c6396a/Caracteristicas-de-los-registros-diagnosticos-de-preeclampsia-en-el-Peru.pdf).<br>
+-	Moquillaza-Alcántara. V, **Romero-Cerdán A** ¿Es posible impactar en la salud mediante redes sociales y podremos confiar en la información que transmiten? Rev Int Salud Matern Fetal. 2019; 4(3): 29-30. [(*Link*)](http://ojs.revistamaternofetal.com/index.php/RISMF/article/view/111).<br>
+
+\pagebreak
+
+<br>
+<br>
+
+# Habilidades técnicas 
+
+<!--Basado en https://github.com/akirosingh -->
+
+```{r habilidades, results='markup'}
+tribble(
+   ~`Lenguajes`, ~Softwares, ~`Gestores de referencia`, ~`Buscadores académicos`,
+  "R, Git, CSS, HTML, RMarkdown, YAML", 
+  "RStudio, GitHub, Stata, VS Code",
+  "Mendeley, Zotero",
+  "PubMed, Cochrane, Scopus"
+) %>%
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
+  kable_styling(full_width = F, font_size = 9,latex_options = "hold_position") %>% 
+  row_spec(0, bold = T, color = "#414141") %>% 
+  row_spec(1, bold = F, color = "#7f7f7f") %>% 
+  column_spec(column = 1:3, width = '3.75cm')
+```
+
+# Idiomas
+
+<!--Basado en https://github.com/loreabad6  -->
+
+```{r idiomas, results='markup'}
+
+data.frame(
+  Skill = c("Reading", "Writing", "Listening","Speaking"),
+  Español = cell_spec(c(rep("Native", 4)), 'latex', color = '#5b5b5b'),  
+  Inglés = cell_spec(c("B1","B1","B1","B1"), 'latex', color = '#5b5b5b'), 
+  Portugués = cell_spec(c("B2","B1","B2","B1"), 'latex', color = '#5b5b5b') 
+) %>% 
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>% 
+  kable_styling(full_width = F, font_size = 10, latex_options = "HOLD_position") %>%  
+  footnote(
+    footnote_as_chunk = T,
+    general_title = " ",
+    #general = " ",
+    escape = F
+  ) %>%
+  column_spec(column = 1:6, width = '2.4cm')  #%>%
+  # add_header_above(' ', line = F) %>%
+  # row_spec(0:4, extra_latex_after = "\\arrayrulecolor{white}")
+
+```
+
+# Referencias
+
+```{r referencias}
+tribble(
+  ~ role, ~ course, ~ organisation, ~ country, ~ details,
+  "Instituto de Evaluación de Tecnologías en Salud e Investigación - EsSalud", "Investigador asociado", "Percy Soto Becerra, MD, MSc(c)", "Lima, Perú", "Celular: +51 977 371 554 | Email: percys1991@gmail.com",
+  "Instituto de Evaluación de Tecnologías en Salud e Investigación - EsSalud", "Evaluadora de tecnologías sanitarias", "Paquita Crismalú Díaz Sánchez, MD, MSc(c)", "Lima, Perú", "Celular: +51 961 531 665 | Email: pcdiazs@gmail.com",
+  "Universidad San Ignacio de Loyola", "Investigador asociado", "Diego Urrunaga Pastor, MD, MSc(c)", "Lima, Perú", "Celular: +51 980 668 226 | Email: diego.urrunaga.pastor1@gmail.com"
+  ) %>% 
+  detailed_entries(role, course, organisation, country, details)
+```
+
+<!--Repositorio de vitae: https://github.com/mitchelloharawild/vitae -->
