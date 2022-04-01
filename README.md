@@ -11,10 +11,10 @@ You are welcome to copy the files and make your own edits.
 --- <br>
 **Make sure to install <code>tinytex</code>, <code>vitae</code>, <code>kableExtra</code> and <code>huxtable</code> packages if you haven't done so:**
                                                                                                               
-                                                                                                              ``` 
-                                                                                                            install.packages("tinytex")
-                                                                                                            tinytex::install_tinytex()
-                                                                                                            install.packages(c("vitae", "kableExtra", "huxtable"))
-                                                                                                            ```
+``` 
+install.packages("tinytex")
+tinytex::install_tinytex()
+install.packages(c("vitae", "kableExtra", "huxtable"))
+```
                                                                                                             
-                                                                                                            Happy vitae-ing!! 👋
+Happy vitae-ing!! 👋
